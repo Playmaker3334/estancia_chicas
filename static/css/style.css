@@ -1,0 +1,1225 @@
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --rojo: #881014;
+    --gris: #5D6678;
+    --titulos: 'Goldman', cursive;
+    --subtitulos: 'Anton', cursive;
+    --parrafos: 'Playfair Display', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    /* Elimina el margen predeterminado del cuerpo */
+    padding: 0;
+    /* Elimina el padding predeterminado del cuerpo */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--negro);
+    font-weight: 300;
+}
+
+.contenedor {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Header */
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+/* Seccion del contendor del encabezado(general) */
+.contenedor-navegacion {
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    border-bottom: none;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.hamburguer {
+    display: none;
+    /* Ocultar por defecto */
+}
+
+/* Sección del logo */
+.contenido-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    /* Ajusta el ancho al 90% del viewport */
+    margin: 0 auto;
+    /* Centra el contenido horizontalmente */
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 20px;
+    /* Reduce el margen para mejor ajuste */
+}
+
+/* Sección del menú */
+.enlaces-header {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    /* Permite que los enlaces ocupen el espacio disponible */
+    justify-content: flex-end;
+    /* Alinea el menú a la derecha */
+}
+
+.enlaces-header a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 1.2rem;
+    /* Usa rem en lugar de porcentaje */
+    font-weight: bold;
+    font-family: var(--parrafos);
+}
+
+.enlaces-header a:hover {
+    color: var(--rojo);
+}
+
+/* Contenedor general del video */
+.contenido-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Hace que el contenedor tenga el 100% de la altura de la pantalla */
+    overflow: hidden;
+}
+
+.contenido-header::before {
+    content: '';
+    position: absolute;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+/* Video Section */
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(60%) contrast(110%);
+}
+
+/* Estilo para la información que esta sobre el video */
+
+.textos-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.textos-header h1 {
+    font-size: 120px;
+    color: var(--blanco);
+    margin-right: 70px;
+    margin-left: 70px;
+    font-family: var(--titulos);
+
+}
+
+.textos-header p {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 10px;
+    font-family: var(--parrafos);
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: var(--rojo);  /* Color naranja */
+    color: #fff; 
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;  /* Bordes redondeados */
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    font-family: var(--subtitulos);
+}
+
+.whatsapp-button:hover {
+    background-color: var(--rojo); 
+    transform: scale(1.05);  /* Efecto de agrandar al pasar el mouse */
+}
+
+.whatsapp-button i {
+    font-size: 24px; 
+    margin-left: 10px;  /* Espacio entre el texto y el ícono */
+}
+
+/*  Media queries para diseño responsivo */
+@media (max-width: 1024px) {
+    .whatsapp-button {
+        padding: 10px 25px; 
+        font-size: 16px;
+    }
+    .whatsapp-button i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .whatsapp-button i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0; 
+        font-size: 14px;
+        box-shadow: none; /* Sin sombra en pantallas muy pequeñas */
+    }
+    .whatsapp-button i {
+        font-size: 16px;
+    }
+}
+
+/* EStilos del contendedor 2 */
+
+.img {
+    max-width: 100%;
+
+}
+
+.contenedor-nosotros {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinea los elementos al inicio */
+    padding-top: 80px;
+    gap: 16px;
+    /* Espacio entre los elementos */
+    background-color: #ededed;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.texto-mision-vision {
+    flex: 0 0 calc(50% - 8px);
+    /* Ocupa la mitad del espacio */
+    box-sizing: border-box;
+    /* Incluye el padding y border en el ancho */
+    margin-bottom: 5%;
+}
+
+.texto-nosotros,
+.imagenes-nosotros {
+    flex: 0 0 calc(50% - 8px);
+    /* Ajusta el espacio entre columnas */
+    box-sizing: border-box;
+    /* Incluye el padding y border en el ancho */
+    margin-top: -5px;
+}
+
+.texto-nosotros h2,
+.mision-vision h2 {
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-family: var(--subtitulos);
+    margin-top: 10px;
+}
+
+.texto-nosotros p,
+.mision-vision p {
+    margin-left: 100px;
+    text-align: justify;
+    font-family: var(--parrafos);
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+.contenedor-imagenes {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    /* Reducimos el ancho máximo */
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    /* Alineamos más hacia la izquierda */
+    margin-left: 30px;
+    /* Ajustamos margen izquierdo */
+    margin-top: 0px;
+    /* Subimos un poco el conjunto de imágenes */
+
+}
+
+.imagen {
+    position: relative;
+    width: 85%;
+    /* Tamaño moderado */
+    max-width: 300px;
+    /* Ajuste del tamaño máximo */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 25%;
+}
+
+.imagen1 {
+    top: 0;
+    left: -90%;
+    /* Lo acercamos más al texto */
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.imagen2 {
+    position: absolute;
+    top: 30px;
+    /* Menos separación vertical */
+    left: -170px;
+    /* Ajustamos para acercarlas más */
+    z-index: 2;
+    opacity: 1;
+}
+
+/*Espacio para mision y vision*/
+.mision-vision {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Espaciado antes de las imágenes */
+}
+
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Misma altura que el primer video */
+    overflow: hidden;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/*Aqui comienza el contenedor de herramientas*/
+/* Contenedor general */
+
+.herramientas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    /* Hace que los elementos tengan la misma altura */
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Reducir la separación */
+    padding: 40px;
+}
+
+
+/* Contenedor de cada servicio (imagen + información) */
+.contenedor-herramientas {
+    display: flex;
+    align-items: stretch;
+    /* Hace que los elementos tengan la misma altura */
+    justify-content: space-between;
+    width: 48%;
+    max-width: 650px;
+    background: var(--blanco);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Imagen */
+.image {
+    flex: 1;
+    height: 100%;
+    /* Ajusta la imagen para que tenga la misma altura */
+    min-height: 350px;
+    /* Evitar que se haga demasiado pequeña */
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    /* Evita distorsión y mantiene proporción */
+}
+
+/* Especificar imágenes */
+.image3 {
+    background-image: url("../img/torno.jpeg")!important;
+}
+
+.image4 {
+    background-image: url("../img/fresadora.jpeg")!important;
+}
+
+/* Caja de texto */
+.herramienta {
+    flex: 1;
+    padding: 30px;
+    /* Aumentar padding para más espacio */
+    background: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    /* Ajusta la altura al contenedor */
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto hover: la información se mueve hacia la imagen */
+.contenedor-herramientas:hover .herramienta {
+    transform: translateX(30px);
+    /* Desplazar hacia la imagen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image {
+    flex: 1;
+    height: auto;
+    /* Se ajusta automáticamente */
+    min-height: 450px;
+    /* Tamaño mínimo para que se mantenga grande */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.image3 {
+    background-image: url('/img/torno.jpeg');
+}
+
+.image4 {
+    background-image: url('/img/fresadora.jpeg');
+}
+
+.herramientas h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    /* Ajusta el tamaño del título */
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
+    font-family: var(--subtitulos);
+
+}
+
+.herramienta h2 {
+    font-size: 14px;
+    /* Tamaño de la letra */
+    font-weight: bold;
+    /* Negrita */
+    color: var(--gris);
+    /* Color oscuro */
+    text-transform: uppercase;
+    /* Mayúsculas */
+    margin-bottom: 10px;
+    /* Espacio debajo */
+    text-align: left;
+    /* Alineado a la izquierda */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    top: 10px;
+    /* Ajusta la distancia desde arriba */
+    left: 20px;
+    /* Ajusta la distancia desde la izquierda */
+    font-family: var(--parrafos);
+}
+
+.herramienta h3 {
+    font-size: 23px;
+    /* Tamaño de la letra */
+    font-weight: 600;
+    /* Semi-negrita */
+    color: var(--rojo);
+    /* Color más claro */
+    text-align: center;
+    /* Centrado */
+    font-family: var(--parrafos);
+    /* Cambia el tipo de letra */
+    margin-bottom: 10px;
+    /* Espacio debajo */
+
+}
+
+.herramienta p {
+    text-align: justify;
+    /* Justificar los párrafos */
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--negro);
+    /* Color de texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    font-family: var(--parrafos);
+    hyphens: auto;
+    /* Habilita la separación automática de palabras */
+    word-spacing: -0.5px;
+    /* Reduce los espacios innecesarios */
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* Cuando la pantalla es menor a 768px */
+    .herramientas {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contenedor-herramientas {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .herramienta {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .herramienta h2 {
+        position: relative;
+        text-align: center;
+        top: auto;
+        left: auto;
+    }
+}
+
+/* Servicios general */
+.services {
+    display: flex;
+    flex-direction: column;
+    /* Asegura que los elementos estén en columna */
+    align-items: center;
+    /* Centra horizontalmente */
+    gap: 20px;
+    padding: 50px;
+    background-color: #ededed;
+}
+
+.services h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    /* Elimina márgenes extra */
+    font-family: var(--subtitulos);
+}
+
+.contenedor-services {
+    display: flex;
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    align-items: center;
+    /* Asegura alineación vertical */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Permite que los elementos se acomoden en múltiples líneas si es necesario */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho disponible */
+    max-width: 1200px;
+    /* Ajusta según tu necesidad */
+    margin: 0 auto;
+    /* Centra el contenedor */
+}
+
+.service {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Pestaña roja */
+.service img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor de la pestaña roja */
+.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    /* Solo para mostrar el título al inicio */
+    background: rgba(209, 53, 53, 0.9);
+    /* Color rojo */
+    text-align: center;
+    transition: height 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Título negro (siempre visible) */
+.info h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin: 0;
+    z-index: 2;
+    font-family: var(--parrafos);
+}
+
+/* Texto blanco (inicialmente oculto) */
+.info p {
+    color: white;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: var(--parrafos);
+}
+
+/* Cuando el usuario pasa el cursor, la pestaña roja se expande */
+.service:hover .info {
+    height: 100%;
+    /* Ahora cubre toda la imagen */
+}
+
+.service:hover .info p {
+    opacity: 1;
+    max-height: 300px;
+    /* Ajuste para permitir que el texto sea visible */
+}
+
+/* Cuando el usuario toca/clickea en móviles, la pestaña roja se expande */
+.service .info.expandido {
+    height: 100%;
+    /* Se expande completamente */
+}
+
+.service .info.expandido p {
+    opacity: 1;
+    max-height: 300px;
+}
+
+/* Cuando el ancho de la pantalla es menor a 768px */
+@media (max-width: 768px) {
+    .services {
+        padding: 20px;
+    }
+
+    .service {
+        width: 100%;
+        /* Los servicios ocupan el 100% del ancho */
+        height: auto;
+        /* Ajusta la altura para mantener una proporción adecuada */
+    }
+
+    .info {
+        height: 60px;
+        /* Ajusta la altura de la información visible en pantallas más pequeñas */
+    }
+
+    .info p {
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 14px;
+        /* Reduce el tamaño de fuente para pantallas más pequeñas */
+    }
+}
+
+/* Cuando el ancho de la pantalla es menor a 480px */
+@media (max-width: 480px) {
+    .services {
+        padding: 10px;
+        /* Reduce el padding */
+    }
+
+    .service {
+        width: 100%;
+        height: 400px;
+        /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    .info {
+        height: 70px;
+        /* Ajusta la altura de la pestaña de información */
+    }
+
+    .info h3 {
+        font-size: 16px;
+        /* Reduce el tamaño de fuente del título */
+    }
+
+    .info p {
+        font-size: 12px;
+        /* Reduce el tamaño del texto */
+    }
+}
+
+/*  Contenedor Servicios*/
+
+.contenedor-servicios {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: visible;
+    padding: 60px 0;
+}
+
+/* Servicios */
+
+.servicios {
+    background: var(--blanco);
+}
+
+.contenedor-articulo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    /* Espaciado uniforme entre los elementos */
+    justify-items: center;
+    /* Centrar el contenido dentro de cada celda */
+    align-items: center;
+    /* Alinear verticalmente */
+    margin-top: 60px;
+}
+
+.contenedor-servicios h3{
+    text-align: center;
+    font-size: 32px;
+    font-family: var(--subtitulos);
+}
+
+.articulo {
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    max-width: 300px;
+    /* Ajusta según el diseño */
+    height: 300px;
+    /* Define una altura fija */
+    overflow: hidden;
+    /* Evita que la imagen sobresalga */
+    border-radius: 10px;
+}
+
+.articulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio */
+    border-radius: 10px;
+    /* Mantiene el diseño redondeado */
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor-articulo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-articulo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*Formulario-contacto*/
+
+/* Contenedor principal */
+.contenedor-formulario {
+    background-color: #ededed;
+    margin: 0;
+    /* Elimina márgenes */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    padding: 40px 0;
+    /* Espaciado superior e inferior */
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: row;
+    /* Mantiene la disposición en línea */
+    max-width: 100%;
+    width: 900px;
+    /* Puedes ajustar el valor según necesidad */
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    /* Lo centra en la página */
+}
+
+/* Fondo del formulario para resaltar */
+.formulario {
+    padding: 40px;
+    width: 60%;
+    background: #ffffff;
+}
+
+/* Asegurar que todo el contenido sea responsive */
+@media (max-width: 768px) {
+
+    .formulario-contacto {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: stretch; /* Asegura que los elementos ocupen todo el ancho */
+    }
+
+    .informacion-contacto,
+    .formulario {
+        width: 100% !important; 
+        flex: 1;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .informacion-contacto h3{
+        transform: translateY(-80px);
+    }
+
+    .informacion-contacto p{
+        transform: translateY(-80px);
+    }
+
+    .textos-header h1 {
+        font-size: 10vw;
+        /* Aumenta el tamaño de la fuente */
+        margin: 0 10px;
+        /* Reduce el margen */
+    }
+
+    .textos-header p {
+        font-size: 4vw;
+        /* Aumenta el tamaño de la fuente */
+    }
+
+    .contenedor-nosotros {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .texto-mision-vision {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .texto-nosotros h2,
+    .mision-vision h2 {
+        margin-left: 10px;
+        /* Reduce el margen izquierdo */
+    }
+
+    .texto-nosotros p,
+    .mision-vision p {
+        margin-left: 10px;
+        /* Reduce el margen izquierdo */
+        margin-right: 10px;
+        /* Reduce el margen derecho */
+    }
+
+    .contenedor-imagenes {
+
+        display: none;
+    }
+
+    .informacion-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        height: 100%; /* Asegura que ocupe todo el alto disponible */
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
+
+
+.informacion-contacto {
+    background-color: black;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    width: 40%;
+    text-align: center;
+    flex: 1;
+}
+
+.informacion-contacto h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-top: 60%;
+}
+
+.informacion-contacto p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.informacion-contacto a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Formulario */
+.formulario {
+    padding: 40px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1.5;
+}
+
+.input-formulario {
+    margin-bottom: 15px;
+}
+
+.input-formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-formulario input,
+.input-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+/* Estilos del footer */
+footer {
+    background-color: #b53034;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.footer-contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Fila principal con Logo, Mapa y Horarios */
+.footer-fila {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Logo */
+.logo-final img {
+    width: 260px;
+    height: auto;
+}
+
+/* Mapa */
+.mapa iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+}
+
+/* Horarios */
+.horarios {
+    text-align: left;
+}
+
+.horarios h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .contenedor-navegacion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 5%;
+        /* Reducimos un poco el padding vertical */
+    }
+
+    .logo {
+        height: 45px;
+        /* Tamaño más pequeño */
+        margin: 0;
+        /* Eliminamos márgenes innecesarios */
+        padding: 0;
+        /* Aseguramos que no tenga relleno extra */
+    }
+
+    .logo img {
+        height: 45px;
+        /* Ajustamos el tamaño */
+        display: block;
+        /* Evita que tenga espacios extras */
+        position: relative;
+        /* Permite moverlo sin afectar el flujo normal */
+        top: -5px;
+        /* Ajusta la posición verticalmente */
+        margin-left: 1%;
+        /* Mueve ligeramente hacia la izquierda */
+    }
+
+    .hamburguer {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: relative;
+        margin-right: 5%;
+        /* Ajustamos con margen en porcentaje */
+    }
+
+    /* Ajustar el menú desplegable */
+
+    .enlaces-header {
+        display: none;
+        /* Ocultar el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #b53034;
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .enlaces-header a {
+        padding: 9px 9px;
+        display: block;
+        color: #ffffff;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .enlaces-header.active {
+        display: flex;
+    }
+
+    .contenedor-nosotros {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .texto-mision-vision {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .texto-nosotros h2,
+    .mision-vision h2 {
+        margin-left: 10px;
+        /* Reduce el margen izquierdo */
+    }
+
+    .texto-nosotros p,
+    .mision-vision p {
+        margin-left: 10px;
+        /* Reduce el margen izquierdo */
+        margin-right: 10px;
+        /* Reduce el margen derecho */
+    }
+
+    .contenedor-imagenes {
+
+        display: none;
+    }
+}
+
+
+/* Media Query para dispositivos móviles (pequeños) */
+@media (max-width: 480px) {
+    .textos-header h1 {
+        font-size: 12vw;
+        /* Tamaño aún más grande para móviles */
+    }
+
+    .textos-header p {
+        font-size: 5vw;
+        /* Tamaño aún más grande para móviles */
+    }
+
+    .texto-nosotros h2,
+    .mision-vision h2 {
+        font-size: 1.5rem;
+        /* Reduce el tamaño de la fuente */
+    }
+
+    .texto-nosotros p,
+    .mision-vision p {
+        font-size: 0.9rem;
+        /* Reduce el tamaño de la fuente */
+    }
+
+    /*Footer*/
+    .footer-fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-final img {
+        width: 150px;
+        /* Un poco más pequeño en tablets */
+    }
+
+    .mapa iframe {
+        width: 100%;
+        /* Hace que el mapa ocupe el ancho completo */
+        max-width: 400px;
+        height: 250px;
+    }
+
+}
+
+.form-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: var(--parrafos);
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.form-message.info {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}

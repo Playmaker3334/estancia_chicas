@@ -1,0 +1,278 @@
+<!DOCTYPE html> <!-- La version mas actualizada de html -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zambrano Pagina Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Goldman:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Apartado del encabezado -->
+        <div class="contenedor-navegacion ">
+            <div class="contenido-navegacion contenedor">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='img/logo.png')}}">
+                </div>
+                <div class="enlaces-header">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#quienes-somos">¿Quiénes somos?</a>
+                    <a href="#service">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="hamburguer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apartado del video -->
+        <div class="contenido-header" id="inicio">
+            <div class="contenedor-encabezado">
+                <div class="textos-header">
+                    <h1>ZAMBRANO</h1>
+                    <p>Mantenimiento Industrial CNC</p>
+                    <!-- Botón de WhatsApp con Font Awesome -->
+                    <a class="whatsapp-button" href="https://wa.me/9999005850?text=Hola%20quiero%20más%20información"
+                        target="_blank">
+                        Más Información
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <video class="video" autoplay loop muted>
+                    <source src="{{url_for('static', filename='video/posiblevideo1.mp4')}}">
+                </video>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Apartado de quienes somos  -->
+    <div class="contenedor-nosotros" id="quienes-somos">
+        <!-- Contenedor para el texto y mision/vision -->
+        <div class="texto-mision-vision">
+            <div class="texto-nosotros">
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una empresa yucateca especializada en la manufactura y reparación de piezas de alta precisión,
+                    utilizando tornos CNC y fresadoras de última tecnología. Nos enfocamos en ofrecer soluciones
+                    innovadoras
+                    y personalizadas para la industria manufacturera, optimizando tiempos de producción y garantizando
+                    la
+                    más alta calidad en cada pieza.
+                </p>
+            </div>
+
+            <!-- Mision y Vision debajo de Quienes Somos -->
+            <div class="mision-vision">
+                <h2>Misión</h2>
+                <p>En nuestra empresa, nos dedicamos a proporcionar soluciones de alta calidad para la industria
+                    manufacturera.
+                    Utilizamos maquinaria CNC avanzada, como tomos y fresadoras, para reparar piezas y resolver
+                    problemas de maquinaria.
+                    Nuestro enfoque se basa en la ingeniería precisa y eficiente, aplicando principios científicos y
+                    tecnológicos
+                    para lograr resultados óptimos.
+                </p>
+                <h2>Visión</h2>
+                <p>Ser una empresa líder en manufactura y reparación de piezas de alta precisión, destacando por nuestra
+                    innovación, calidad y compromiso con la industria.</p>
+            </div>
+        </div>
+
+        <!-- Imágenes a la derecha -->
+        <div class="contenedor-imagenes">
+            <img src="{{url_for('static', filename='img/fresaE.jpeg')}}" alt="Imagen 1" class="imagen imagen1">
+            <img src="{{url_for('static', filename='img/Torno fuera.jpeg')}}" alt="Imagen 2" class="imagen imagen2">
+        </div>
+
+    </div>
+
+    <!-- Nuevo contenedor para el video adicional -->
+    <div class="contenedor-video">
+        <video class="video" autoplay loop muted>
+            <source src="{{url_for('static', filename='video/segundovideo.mp4')}}" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+
+
+    <!-- Nuevo contenedor para las herramientas  que se usan -->
+    <section class="herramientas">
+        <h1>Maquinaria</h1>
+        <div class="contenedor-herramientas">
+            <div class="herramienta">
+                <h2>Servicio</h2>
+                <h3>TORNO CNC</h3>
+                <p>Nuestro proceso de Torneado CNC produce prototipos personalizados y piezas finales en un solo día
+                    laborable.
+                    Utilizamos un torno CNC con herramientas activas que permiten mecanizar características como
+                    orificios axiales y radiales, partes planas, ranuras y hendiduras.</p>
+            </div>
+            <div class="image image3"></div>
+        </div>
+
+        <div class="contenedor-herramientas">
+            <div class="herramienta">
+                <h2>Servicio</h2>
+                <h3>FRESADO CNC</h3>
+                <p>Nuestro proceso de Fresado CNC produce prototipos personalizados y piezas finales en un solo día
+                    laborable.
+                    Utilizamos procesos de fresado triaxial y fresado indexado en 3 ejes para fabricar piezas en
+                    metales
+                    aptos para ingeniería.</p>
+            </div>
+            <div class="image image4"></div>
+        </div>
+    </section>
+    <!-- Sección de Explicación General -->
+    <section class="services" id="service">
+        <h1>Servicios</h1>
+        <div class="contenedor-services">
+            <div class="service">
+                <img src="{{url_for('static', filename='img/Diseño.jpeg')}}">
+                <div class="info">
+                    <h3>DISEÑO</h3>
+                    <p>Servicio de mecanizado de piezas a través de tornos y fresadoras controladas por computadora.
+                    </p>
+                </div>
+            </div>
+            <div class="service">
+                <img src= "{{url_for('static', filename='img/tornoprueba2.jpeg')}}">
+                <div class="info">
+                    <h3>MECANIZADO CNC</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, assumenda.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="{{url_for('static', filename='img/tratamiento.jpeg')}}">
+                <div class="info">
+                    <h3>TRATAMIENTO</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, corrupti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartado de contendor -->
+    <section class="servicios">
+        <div class="contenedor-servicios">
+            <h3>Algunos trabajos</h3>
+            <div class="contenedor-articulo">
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza1.jpeg')}}">
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza2.jpeg')}}">
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza3.jpeg')}}">
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza4.jpeg')}}">
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza5.jpeg')}}">
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <img src="{{url_for('static', filename='img/pieza6.jpeg')}}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Apartado del formulario-contacto -->
+    <section class="contenedor-formulario" id="contacto">
+        <section class="formulario-contacto">
+            <section class="informacion-contacto">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 59 478-I, Rep. Granjas, 97370 Kanasín, Yuc.</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:luca@turilli.it">luca@turilli.it</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> +31 1234 10921</p>
+            </section>
+    
+            <section class="formulario">
+                <form id="contacto-form" action="/add_contact" method="POST" enctype="multipart/form-data">
+                    <div class="input-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Pedro" required>
+                    </div>
+                    <div class="input-formulario">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Marquez Perez" required>
+                    </div>
+                    <div class="input-formulario">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@gmail.com" required>
+                    </div>
+                    <div class="input-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="+90 543 779 9410" required>
+                    </div>
+                    <div class="input-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    </div>
+                    <div class="input-formulario">
+                        <label for="archivo">Subir archivo</label>
+                        <input type="file" name="archivo">
+                    </div>
+                    <div class="input-formulario">
+                        <button type="submit" class="btn">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+    
+
+
+    <footer>
+        <div class="footer-contenedor">
+            <!-- Sección con Logo, Mapa y Horarios en una sola fila -->
+            <div class="footer-fila">
+                <!-- Logo -->
+                <div class="logo-final">
+                    <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de la empresa">
+                </div>
+
+                <!-- Mapa -->
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.4325658650723!2d-89.58139299999999!3d20.935136999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56704ef5bc72c5%3A0xa42608795c4686e5!2sMantenimiento%20y%20Manufacturas%20Industriales%20Zambrano%20S.A.%20de%20C.V.!5e0!3m2!1sen!2smx!4v1740417615696!5m2!1sen!2smx"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Horarios -->
+                <div class="horarios">
+                    <h4>Horario</h4>
+                    <p>Lunes - Viernes: 8am - 5:15pm</p>
+                    <p>Sábados: 8am - 2pm</p>
+                </div>
+            </div>
+            <!-- Copyright debajo de la fila -->
+            <div class="copyright">
+                <p>© 2024 Zambrano. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/9185fa1df3.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>

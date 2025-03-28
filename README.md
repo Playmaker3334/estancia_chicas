@@ -1,3 +1,3 @@
 # estancia_chicas
 
-nanana, naaaa
+pim pim,pim pim, pim ,pim pim
